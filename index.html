@@ -118,6 +118,11 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
 .pp details p,.pp details li{line-height:1.6;max-width:80ch}
 .pp code{font-size:.92em}
 .pp-empty{color:var(--color-fg-muted);font-size:var(--cds-font-size-body);padding:var(--cds-pad-md) 0}
+.pp-band{display:flex;flex-direction:column;gap:4px;padding:var(--cds-pad-lg) calc(var(--cds-pad-lg) * 1.25);border-radius:var(--cds-radius);background:var(--color-fg);color:var(--color-bg);scroll-margin-top:96px}
+.pp-band h2{margin:0;font-family:var(--font-anthropic-serif);font-weight:400;font-size:clamp(1.45rem,2.8vw,2rem);line-height:1.2;color:inherit;text-wrap:balance}
+.pp-band p{margin:0;font-size:var(--cds-font-size-body);opacity:.78;max-width:75ch}
+.pp-jump{align-self:center;margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:.5em .95em;border-radius:var(--cds-radius);background:var(--color-fg);color:var(--color-bg);text-decoration:none;font-size:var(--cds-font-size-body);font-weight:var(--cds-font-weight-medium);white-space:nowrap}
+.pp-jump:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
 [data-dash-source-state=refreshing]{opacity:.5}
 </style>
 
@@ -138,6 +143,7 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
     <button type="button" class="pp-btn" data-cls="T" aria-pressed="true">Tree<small>CBH ≥ 14.1 ซม.</small></button>
     <button type="button" class="pp-btn" data-cls="S" aria-pressed="false">Sapling/shrub<small>CBH &lt; 14.1 ซม., สูง ≥ 1.3 ม.</small></button>
   </div>
+  <a class="pp-jump" href="#fauna-band">ไปที่สัตว์ในดิน ↓</a>
 </nav>
 
 <section class="pp-sec" id="summary" aria-label="ค่าสรุป">
@@ -318,7 +324,10 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
 </section>
 
 <section class="pp-sec" id="fauna">
-  <h2>สัตว์ในดิน (soil fauna)</h2>
+  <div class="pp-band" id="fauna-band">
+    <h2>สัตว์ในดิน (soil fauna)</h2>
+    <p>จำนวนตัว · ความหลากหลาย · ค่าความสำคัญ (IV) · ความคล้ายคลึงระหว่างแปลง · วิเคราะห์รวม macro- และ meso-fauna</p>
+  </div>
   <p class="pp-note">ตามคู่มือ แต่ละแปลงย่อยสุ่ม quadrat 1 × 1 ม. คุ้ยหา macrofauna และเก็บดิน 20 × 20 ซม. ลึก 5 ซม. สกัด mesofauna ด้วย Tullgren funnel · วิเคราะห์รวม macro- และ meso-fauna ตามที่ sheet กำหนด ความหนาแน่นคิดเป็นตัวต่อ quadrat 1 ตร.ม. · มีข้อมูล 15 แปลงย่อย (A1 ไม่มีข้อมูล) · ไม่รวมสัตว์ที่อาศัยบนพืชหรือบินได้ และสัตว์มีกระดูกสันหลัง</p>
   <p class="pp-note"><span data-draw="scopeName">—</span> · ใช้ปุ่มขอบเขตด้านบน</p>
   <div class="pp-kpis">
