@@ -275,7 +275,7 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
     </div>
   </div>
   <div class="pp-card">
-    <h3>สัตว์ในดินในแปลงย่อยนี้ (<span data-draw="fclsName">—</span>)</h3>
+    <h3>สัตว์ในดินในแปลงย่อยนี้</h3>
     <div class="pp-mini">
       <div class="pp-kpi"><span class="k">จำนวนตัว</span><span class="v" data-draw="fkpisub" data-source="faunametrics" data-field="individuals" data-d="0">—</span></div>
       <div class="pp-kpi"><span class="k">taxa</span><span class="v" data-draw="fkpisub" data-source="faunametrics" data-field="taxa" data-d="0">—</span></div>
@@ -319,15 +319,8 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
 
 <section class="pp-sec" id="fauna">
   <h2>สัตว์ในดิน (soil fauna)</h2>
-  <p class="pp-note">ตามคู่มือ แต่ละแปลงย่อยสุ่ม quadrat 1 × 1 ม. 1 จุดคุ้ยหา macrofauna และเก็บดิน 20 × 20 ซม. ลึก 5 ซม. สกัด mesofauna ด้วย Tullgren funnel ความหนาแน่นจึงคิด macrofauna ต่อ 1 ตร.ม. และ mesofauna ต่อ 0.04 ตร.ม. · มีข้อมูล 15 แปลงย่อย (A1 ไม่มีข้อมูล) · ไม่รวมสัตว์ที่อาศัยบนพืชหรือบินได้ และสัตว์มีกระดูกสันหลัง</p>
-  <div class="pp-row">
-    <div class="pp-seg" role="group" aria-label="กลุ่มขนาดสัตว์ในดิน">
-      <button type="button" class="pp-btn" data-fcls="ALL" aria-pressed="true">รวม<small>macro + meso</small></button>
-      <button type="button" class="pp-btn" data-fcls="MA" aria-pressed="false">Macrofauna<small>คุ้ยหาใน 1 × 1 ม.</small></button>
-      <button type="button" class="pp-btn" data-fcls="ME" aria-pressed="false">Mesofauna<small>ไร หางดีด สองง่าม ฯลฯ</small></button>
-    </div>
-    <span class="pp-note"><span data-draw="scopeName">—</span> · ใช้ปุ่มขอบเขตด้านบน</span>
-  </div>
+  <p class="pp-note">ตามคู่มือ แต่ละแปลงย่อยสุ่ม quadrat 1 × 1 ม. คุ้ยหา macrofauna และเก็บดิน 20 × 20 ซม. ลึก 5 ซม. สกัด mesofauna ด้วย Tullgren funnel · วิเคราะห์รวม macro- และ meso-fauna ตามที่ sheet กำหนด ความหนาแน่นคิดเป็นตัวต่อ quadrat 1 ตร.ม. · มีข้อมูล 15 แปลงย่อย (A1 ไม่มีข้อมูล) · ไม่รวมสัตว์ที่อาศัยบนพืชหรือบินได้ และสัตว์มีกระดูกสันหลัง</p>
+  <p class="pp-note"><span data-draw="scopeName">—</span> · ใช้ปุ่มขอบเขตด้านบน</p>
   <div class="pp-kpis">
     <div class="pp-kpi"><span class="k">จำนวนตัวที่พบ</span><span class="v" data-draw="fkpi" data-source="faunametrics" data-field="individuals" data-d="0">—</span><span class="u">ตัว จาก <span data-draw="fkpi" data-source="faunametrics" data-field="subplots" data-d="0">—</span> แปลงย่อย</span></div>
     <div class="pp-kpi"><span class="k">จำนวน taxa · กลุ่ม</span><span class="v"><span data-draw="fkpi" data-source="faunametrics" data-field="taxa" data-d="0">—</span> · <span data-draw="fkpi" data-source="faunametrics" data-field="groups" data-d="0">—</span></span><span class="u">taxa · อันดับ/ชั้น</span></div>
@@ -399,7 +392,7 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
   <div class="pp-card">
     <h3>ตารางสัตว์ในดินทุก taxa</h3>
     <div class="pp-scroll tall"><table class="pp-table" id="ftaxa-table" data-source="faunataxa" data-row-key="key">
-      <thead><tr><th data-field="th">taxon</th><th data-field="group" class="l">กลุ่ม</th><th data-field="size" class="l">ขนาด</th><th data-field="n">จำนวนตัว</th><th data-field="dens_m2">ตัว/ตร.ม.</th><th data-field="RD">RD (%)</th><th data-field="F">F (%)</th><th data-field="RF">RF (%)</th><th data-field="IV">IV</th><th data-field="subplots" class="l">พบในแปลงย่อย</th></tr></thead>
+      <thead><tr><th data-field="th">taxon</th><th data-field="group" class="l">กลุ่ม</th><th data-field="n">จำนวนตัว</th><th data-field="dens_m2">ตัว/ตร.ม.</th><th data-field="RD">RD (%)</th><th data-field="F">F (%)</th><th data-field="RF">RF (%)</th><th data-field="IV">IV</th><th data-field="subplots" class="l">พบในแปลงย่อย</th></tr></thead>
       <tbody data-draw="ftaxa"></tbody>
     </table></div>
   </div>
@@ -430,7 +423,7 @@ let lastW=0;window.addEventListener('resize',()=>{const w=document.documentEleme
     <li><b>ความหนาแน่น</b> = จำนวนต้น ÷ พื้นที่ (ha) · <b>Dominance</b> = พื้นที่หน้าตัดรวม ÷ พื้นที่ · <b>ความถี่</b> = จำนวนหน่วยที่พบ ÷ หน่วยทั้งหมด × 100 (ระดับแปลง: แปลงย่อย 20×20 ม.; ระดับแปลงย่อย: quadrat 10×10 ม.) · IVI = RD + RDo + RF</li>
     <li><b>Shannon</b> H′ = −Σ pᵢ ln pᵢ · <b>Evenness</b> J = H′ ÷ ln S · <b>Simpson</b> 1 − Σ pᵢ² · <b>Sørensen</b> QS = 2C ÷ (A + B) · <b>การกระจาย</b> s²/x̄ ของจำนวนต้นต่อ quadrat (ความแปรปรวนแบบ n − 1)</li>
     <li><b>มวลชีวภาพ</b> Ogawa et al. (1965): Ws = 0.0396(D²H)^0.9326, Wb = 0.003487(D²H)^1.027, Wl = 1 ÷ [28 ÷ (Ws + Wb) + 0.025] · ราก = AGB × 0.27 · คาร์บอน = 47% ของมวลรวม · CO₂ = C × 44/12 (ตาม LESS-FOR-01 ไม้ทั่วไป)</li>
-    <li><b>สัตว์ในดิน</b> จำนวนตัวตามที่พบ (B9 กรอกเป็นตัว/ตร.ม. คูณ 25 ทุกค่า จึงหาร 25 กลับ) · ความหนาแน่น macrofauna = ตัว ÷ 1 ตร.ม., mesofauna = ตัว ÷ 0.04 ตร.ม. เฉลี่ยต่อแปลงย่อยที่มีข้อมูล · IV = RD + RF · H′, J, Simpson และ Sørensen คิดจาก taxa · s²/x̄ ใช้จำนวนตัวต่อแปลงย่อย · ไม่รวมสัตว์บนพืช/บินได้ และสัตว์มีกระดูกสันหลัง · รวมชื่อซ้ำและแก้ตัวสะกดตามบันทึกการแก้ไข</li>
+    <li><b>สัตว์ในดิน</b> วิเคราะห์รวม macro- และ meso-fauna · ใช้จำนวนตัวตามที่พบ (B9 กรอกเป็นตัว/ตร.ม. คูณ 25 ทุกค่า จึงหาร 25 กลับ) · ความหนาแน่น = จำนวนตัว ÷ 1 ตร.ม. เฉลี่ยต่อแปลงย่อยที่มีข้อมูล · IV = RD + RF · H′, J, Simpson และ Sørensen คิดจาก taxa · s²/x̄ ใช้จำนวนตัวต่อแปลงย่อย · ไม่รวมสัตว์บนพืช/บินได้ และสัตว์มีกระดูกสันหลัง · รวมชื่อซ้ำและแก้ตัวสะกดตามบันทึกการแก้ไข</li>
     <li><b>พื้นที่</b> แปลงย่อยละ 0.04 ha · A = 0.28 ha · B = 0.36 ha · รวม 0.64 ha</li>
     <li><b>ข้อมูลที่เติมหรือแก้</b> ลำดับต้นที่ (B2 ไม่มี, B1/B4/B8/A7 ซ้ำหรือข้าม), เลข tag ของไม้เล็กเป็น 0, ชื่อไทยสะกดผิดและชื่อวิทยาศาสตร์ที่ไม่ตรงกัน, พิกัด B6 และ B3 คำนวณจากพิกัดแก้ค่า, ความสูง 52.5 ม. ของ A1 tag 4 ประมาณใหม่จากความสัมพันธ์ H–DBH, ชื่อ tag 193 (B1) เติมจาก sheet Plant_tag · ไม้ตาย 3 ต้นใน B1 ไม่นำมาคำนวณ</li>
     <li><b>พิกัด</b> ใช้ origin (x₀, y₀) ของแต่ละแปลงย่อยจากคู่มือหัวข้อ 2 · B3 บันทึก X,Y แยกตาม quadrat 10×10 ม. จึงคำนวณพิกัดในแปลงย่อยจาก X_corrected − 100 และ Y_Corrected − 40 · A2 ใช้ x₀ = 0 ใน X_corrected แต่คู่มือกำหนด 20 · B6 คำนวณกลับจากพิกัดแก้ค่า</li>
@@ -624,26 +617,24 @@ envsum: {inputs:['env'], title:'ค่าเฉลี่ยปัจจัยก
  }},
 
 faunametrics: {inputs:['fauna'], title:'ค่าสรุปสัตว์ในดิน (ต่อแปลง/กลุ่ม)',
- description:'จำนวนตัว จำนวน taxa ความหนาแน่นต่อ ตร.ม. ดัชนีความหลากหลาย และการกระจาย แยก macro- กับ meso-fauna',
+ description:'จำนวนตัว จำนวน taxa ความหนาแน่นต่อ ตร.ม. ดัชนีความหลากหลาย และการกระจาย รวม macro- และ meso-fauna',
  fn:(fauna) => {
   const order = (a, b) => (a[0] === b[0] ? +a.slice(1) - +b.slice(1) : a < b ? -1 : 1);
   const ALL16 = ['A1','A2','A3','A4','A5','A6','A7','B1','B2','B3','B4','B5','B6','B7','B8','B9'];
   const sampled = [...new Set(fauna.map((f) => f.sub))].sort(order);   // แปลงย่อยที่มีข้อมูล (A1 ไม่มี)
   const recs = fauna.filter((f) => String(f.include) === '1');         // เฉพาะสัตว์ในดิน
-  const AREA = {macro: 1, meso: 0.04};                                   // ตร.ม.: quadrat 1×1 ม. และดิน 20×20 ซม.
+  const AREA = 1;                                                        // ตร.ม. ต่อแปลงย่อย (quadrat 1 × 1 ม.)
   const scopes = [['ALL', sampled], ['A', sampled.filter((s) => s[0] === 'A')], ['B', sampled.filter((s) => s[0] === 'B')]]
     .concat(ALL16.map((s) => [s, sampled.includes(s) ? [s] : []]));
   const rows = [];
-  for (const [scope, list] of scopes) for (const cls of ['ALL', 'MA', 'ME']) {
-    const r = recs.filter((f) => list.includes(f.sub) && (cls === 'ALL' || f.size === (cls === 'MA' ? 'macro' : 'meso')));
+  for (const [scope, list] of scopes) for (const cls of ['ALL']) {
+    const r = recs.filter((f) => list.includes(f.sub) && true);
     const n = {}, grp = new Set();
     r.forEach((f) => { n[f.taxon] = (n[f.taxon] || 0) + +f.count; grp.add(f.group); });
     const N = Object.values(n).reduce((a, b) => a + b, 0);
     const p = Object.values(n).map((x) => x / N), S = p.length;
     const H = N ? Math.abs(-p.reduce((a, x) => a + x * Math.log(x), 0)) : null;
     const k = list.length;
-    const ma = r.filter((f) => f.size === 'macro').reduce((a, f) => a + +f.count, 0);
-    const me = r.filter((f) => f.size === 'meso').reduce((a, f) => a + +f.count, 0);
     const v = list.map((s) => r.filter((f) => f.sub === s).reduce((a, f) => a + +f.count, 0));
     const mean = k ? v.reduce((a, b) => a + b, 0) / k : 0;
     const varr = k > 1 ? v.reduce((a, x) => a + (x - mean) ** 2, 0) / (k - 1) : null;
@@ -655,7 +646,7 @@ faunametrics: {inputs:['fauna'], title:'ค่าสรุปสัตว์ใ�
     rows.push({key: scope + '|' + cls, scope, cls, subplots: k, individuals: N, taxa: S, groups: grp.size,
       individuals_no_nest: Nx, shannon_no_nest: Nx ? Math.abs(-px.reduce((a, x) => a + x * Math.log(x), 0)) : null,
       simpson_no_nest: Nx ? 1 - px.reduce((a, x) => a + x * x, 0) : null,
-      dens_m2: k ? (ma / AREA.macro + me / AREA.meso) / k : null,     // ตัว/ตร.ม. เฉลี่ยต่อแปลงย่อย
+      dens_m2: k ? N / AREA / k : null,                              // ตัว/ตร.ม. เฉลี่ยต่อแปลงย่อย
       shannon: N ? H : null, evenness: S > 1 ? H / Math.log(S) : null, simpson: N ? 1 - p.reduce((a, x) => a + x * x, 0) : null,
       disp_index: varr !== null && mean > 0 ? varr / mean : null,      // s² / x̄ ของจำนวนตัวต่อแปลงย่อย
       top_taxon: top ? topName + ' · ' + top[0] : '', top_share_pct: top ? 100 * top[1] / N : null});
@@ -669,16 +660,16 @@ faunataxa: {inputs:['fauna'], title:'ค่าความสำคัญขอ�
   const order = (a, b) => (a[0] === b[0] ? +a.slice(1) - +b.slice(1) : a < b ? -1 : 1);
   const sampled = [...new Set(fauna.map((f) => f.sub))].sort(order);
   const recs = fauna.filter((f) => String(f.include) === '1');
-  const AREA = {macro: 1, meso: 0.04};
+  const AREA = 1;                                                        // ตร.ม. ต่อแปลงย่อย
   const scopes = [['ALL', sampled], ['A', sampled.filter((s) => s[0] === 'A')], ['B', sampled.filter((s) => s[0] === 'B')]]
     .concat(sampled.map((s) => [s, [s]]));
   const rows = [];
-  for (const [scope, list] of scopes) for (const cls of ['ALL', 'MA', 'ME']) {
-    const r = recs.filter((f) => list.includes(f.sub) && (cls === 'ALL' || f.size === (cls === 'MA' ? 'macro' : 'meso')));
+  for (const [scope, list] of scopes) for (const cls of ['ALL']) {
+    const r = recs.filter((f) => list.includes(f.sub) && true);
     const g = new Map();
     r.forEach((f) => {
       let t = g.get(f.taxon);
-      if (!t) { t = {taxon: f.taxon, th: f.th, group: f.group, size: f.size, n: 0, subs: new Set()}; g.set(f.taxon, t); }
+      if (!t) { t = {taxon: f.taxon, th: f.th, group: f.group, n: 0, subs: new Set()}; g.set(f.taxon, t); }
       t.n += +f.count; t.subs.add(f.sub);
     });
     const all = [...g.values()], N = all.reduce((a, t) => a + t.n, 0);
@@ -687,8 +678,8 @@ faunataxa: {inputs:['fauna'], title:'ค่าความสำคัญขอ�
     const sumF = F.reduce((a, x) => a + (x || 0), 0);
     all.forEach((t, i) => {
       const RD = 100 * t.n / N, RF = multi ? 100 * F[i] / sumF : null;
-      rows.push({key: scope + '|' + cls + '|' + t.taxon, scope, cls, taxon: t.taxon, th: t.th, group: t.group, size: t.size,
-        n: t.n, dens_m2: t.n / AREA[t.size] / list.length, RD, F: F[i], RF, IV: multi ? RD + RF : RD,
+      rows.push({key: scope + '|' + cls + '|' + t.taxon, scope, cls, taxon: t.taxon, th: t.th, group: t.group,
+        n: t.n, dens_m2: t.n / AREA / list.length, RD, F: F[i], RF, IV: multi ? RD + RF : RD,
         subplots: [...t.subs].sort(order).join(' ')});
     });
   }
@@ -704,8 +695,8 @@ faunagroups: {inputs:['fauna'], title:'องค์ประกอบกลุ�
   const scopes = [['ALL', sampled], ['A', sampled.filter((s) => s[0] === 'A')], ['B', sampled.filter((s) => s[0] === 'B')]]
     .concat(sampled.map((s) => [s, [s]]));
   const rows = [];
-  for (const [scope, list] of scopes) for (const cls of ['ALL', 'MA', 'ME']) {
-    const r = recs.filter((f) => list.includes(f.sub) && (cls === 'ALL' || f.size === (cls === 'MA' ? 'macro' : 'meso')));
+  for (const [scope, list] of scopes) for (const cls of ['ALL']) {
+    const r = recs.filter((f) => list.includes(f.sub) && true);
     const N = r.reduce((a, f) => a + +f.count, 0);
     const g = {};
     r.forEach((f) => { const x = g[f.group] || (g[f.group] = {n: 0, taxa: new Set()}); x.n += +f.count; x.taxa.add(f.taxon); });
@@ -722,8 +713,8 @@ faunasim: {inputs:['fauna'], title:'ความคล้ายคลึงข�
   const recs = fauna.filter((f) => String(f.include) === '1');
   const groups = [['A', sampled.filter((s) => s[0] === 'A')], ['B', sampled.filter((s) => s[0] === 'B')]].concat(sampled.map((s) => [s, [s]]));
   const rows = [];
-  for (const cls of ['ALL', 'MA', 'ME']) {
-    const set = (list) => new Set(recs.filter((f) => list.includes(f.sub) && (cls === 'ALL' || f.size === (cls === 'MA' ? 'macro' : 'meso'))).map((f) => f.taxon));
+  for (const cls of ['ALL']) {
+    const set = (list) => new Set(recs.filter((f) => list.includes(f.sub) && true).map((f) => f.taxon));
     const sets = new Map(groups.map(([k, l]) => [k, set(l)]));
     const pairs = [['A', 'B']];
     sampled.forEach((a) => sampled.forEach((b) => pairs.push([a, b])));
@@ -1281,5 +1272,545 @@ for (const id of Object.keys(CALCS)) dash.calc(id, CALCS[id]);
   });
 })();
 </script>
-<script>window.__runDash();</script>
+<script>(function () {
+  const SCOPE_NAME = {ALL: 'ภาพรวมทุกแปลง', A: 'แปลง A', B: 'แปลง B'};
+  const CLS_NAME = {T: 'Tree', S: 'Sapling/shrub'};
+  const SUBS = ['A1','A2','A3','A4','A5','A6','A7','B1','B2','B3','B4','B5','B6','B7','B8','B9'];
+  const inScope = (sub, scope) => scope === 'ALL' || sub[0] === scope;
+  const P = () => {
+    const p = dash.params() || {};
+    return {scope: p.scope || 'ALL', cls: p.cls || 'T', sub: p.sub || 'A1', subm: p.subm || 'dens_ha', sizek: p.sizek || 'dbh', envv: p.envv || 'tair', fcls: 'ALL', fsubm: p.fsubm || 'taxa'};
+  };
+  const col = (i) => (dash.colors && dash.colors[i % dash.colors.length]) || 'currentColor';
+  const num = (v) => (v === null || v === undefined || v === '' || isNaN(+v) ? null : +v);
+  const fmt = (v, d) => { const n = num(v); return n === null ? '—' : n.toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d}); };
+  const enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
+  const where = (el, k, v) => el.setAttribute('data-where', k + '=' + enc(v));
+  const reduce = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ok = (id) => { const r = dash.data(id); return r.status === 'ok' ? r.data : null; };
+  const failText = (id) => (dash.data(id).status === 'error' ? 'โหลดไม่สำเร็จ' : '—');
+  function placeholder(el, id) {
+    const d = document.createElement('div'); d.className = 'pp-empty'; d.textContent = failText(id); el.replaceChildren(d);
+  }
+  function emptyMsg(el, text) {
+    const d = document.createElement('div'); d.className = 'pp-empty'; d.textContent = text; el.replaceChildren(d);
+  }
+  function tipper(el) {
+    const t = document.createElement('div'); t.className = 'pp-tip'; t.hidden = true; el.appendChild(t);
+    return {
+      show(ev, lines) {
+        t.replaceChildren(...lines.map((l, i) => { const d = document.createElement('div'); if (i === 0) { const b = document.createElement('b'); b.textContent = l; d.appendChild(b); } else d.textContent = l; return d; }));
+        t.hidden = false;
+        const r = el.getBoundingClientRect();
+        let x = ev.clientX - r.left + 12, y = ev.clientY - r.top + 12;
+        const w = t.offsetWidth, h = t.offsetHeight;
+        if (x + w > r.width) x = Math.max(0, ev.clientX - r.left - w - 12);
+        if (y + h > el.offsetHeight) y = Math.max(0, ev.clientY - r.top - h - 12);
+        t.style.left = x + 'px'; t.style.top = y + 'px';
+      },
+      hide() { t.hidden = true; }
+    };
+  }
+  function textWidth(svg, strings, cls) {
+    const g = svg.append('g').attr('class', 'measure');
+    let w = 0;
+    strings.forEach((s) => { const t = g.append('text').attr('class', cls || '').text(s); w = Math.max(w, t.node().getComputedTextLength() || s.length * 6.5); });
+    g.remove();
+    return w;
+  }
+  const svgIn = (el, h, label) => d3.select(el).append('svg').attr('width', '100%').attr('height', h).attr('role', 'img').attr('aria-label', label);
+
+  // ---------- controls (listen only) ----------
+  document.querySelectorAll('.pp-btn[data-scope]').forEach((b) => b.addEventListener('click', () => dash.setParams({scope: b.dataset.scope})));
+  document.querySelectorAll('.pp-btn[data-cls]').forEach((b) => b.addEventListener('click', () => dash.setParams({cls: b.dataset.cls})));
+  document.querySelectorAll('.pp-chip[data-sub]').forEach((b) => b.addEventListener('click', () => dash.setParams({sub: b.dataset.sub})));
+  document.querySelectorAll('.pp-btn[data-fcls]').forEach((b) => b.addEventListener('click', () => dash.setParams({fcls: b.dataset.fcls})));
+  ['subm', 'sizek', 'envv', 'fsubm'].forEach((id) => {
+    document.querySelectorAll('#' + id).forEach((s) => s.addEventListener('change', () => dash.setParams({[id]: s.value})));
+  });
+  dash.onData(() => {
+    const p = P();
+    document.querySelectorAll('.pp-btn[data-scope]').forEach((b) => { const on = b.dataset.scope === p.scope; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    document.querySelectorAll('.pp-btn[data-cls]').forEach((b) => { const on = b.dataset.cls === p.cls; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    document.querySelectorAll('.pp-btn[data-fcls]').forEach((b) => { const on = b.dataset.fcls === p.fcls; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    document.querySelectorAll('.pp-chip[data-sub]').forEach((b) => { const on = b.dataset.sub === p.sub; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    [['subm', p.subm], ['sizek', p.sizek], ['envv', p.envv], ['fsubm', p.fsubm]].forEach(([id, v]) => document.querySelectorAll('#' + id).forEach((s) => { if (document.activeElement !== s) s.value = v; }));
+    document.querySelectorAll('.pp-sw[data-c]').forEach((s) => { s.style.background = col(+s.dataset.c); });
+  });
+
+  // ---------- words ----------
+  dash.draw('scopeName', (el) => { el.textContent = SCOPE_NAME[P().scope]; });
+  dash.draw('clsName', (el) => { el.textContent = CLS_NAME[P().cls]; });
+  dash.draw('subName', (el) => { el.textContent = P().sub; });
+
+  function metricRow(key) { const m = ok('metrics'); return m ? m.find((r) => r.key === key) : null; }
+  function topSpecies(scope, cls) {
+    const s = ok('species'); if (!s) return null;
+    return s.filter((r) => r.scope === scope && r.cls === cls).sort((a, b) => b.IVI - a.IVI)[0] || null;
+  }
+  dash.draw('lede', (el) => {
+    const p = P(), k = el.dataset.k;
+    if (k === 'top' || k === 'topivi') {
+      const t = topSpecies(p.scope, p.cls);
+      if (!t) { el.textContent = failText('species'); return; }
+      where(el, 'key', t.key);
+      el.textContent = k === 'top' ? t.th : fmt(t.IVI, 1);
+      return;
+    }
+    const key = p.scope + '|' + p.cls, m = metricRow(key);
+    if (!m) { el.textContent = failText('metrics'); return; }
+    where(el, 'key', key);
+    el.textContent = k === 'dens' ? fmt(m.dens_ha, 0) : k === 'species' ? fmt(m.species, 0) : fmt(m.c_t_ha, 1);
+  });
+  function drawKpi(el, scope) {
+    const p = P(), key = scope + '|' + p.cls, m = metricRow(key);
+    if (!m) { el.textContent = failText('metrics'); return; }
+    where(el, 'key', key);
+    el.textContent = fmt(m[el.dataset.field], +el.dataset.d || 0);
+  }
+  dash.draw('kpi', (el) => drawKpi(el, P().scope));
+  dash.draw('kpisub', (el) => drawKpi(el, P().sub));
+  dash.draw('cmp', (el) => drawKpi(el, el.dataset.s));
+  dash.draw('pattern', (el) => {
+    const p = P(), m = metricRow(p.scope + '|' + p.cls);
+    if (!m) { el.textContent = '—'; return; }
+    const I = num(m.disp_index);
+    if (I === null) { el.textContent = 'ไม่มีพิกัดพอคำนวณ'; return; }
+    const kind = I < 0.9 ? 'กระจายสม่ำเสมอ' : I <= 1.1 ? 'กระจายแบบสุ่ม' : 'กระจายแบบรวมกลุ่ม';
+    el.textContent = kind + ' · ' + m.disp_quadrats + ' quadrat';
+  });
+  function simRow(cls, a, b) { const s = ok('similarity'); return s ? s.find((r) => r.cls === cls && r.a === a && r.b === b) : null; }
+  dash.draw('sorAB', (el) => { const p = P(), r = simRow(p.cls, 'A', 'B'); if (!r) { el.textContent = failText('similarity'); return; } where(el, 'key', r.key); el.textContent = fmt(r.sorensen, 2); });
+  dash.draw('sorShared', (el) => { const p = P(), r = simRow(p.cls, 'A', 'B'); if (!r) { el.textContent = failText('similarity'); return; } where(el, 'key', r.key); el.textContent = fmt(r.shared, 0); });
+
+  // ---------- IVI stacked bars ----------
+  dash.draw('ivi', (el) => {
+    const s = ok('species'); if (!s) { placeholder(el, 'species'); return; }
+    const p = P();
+    const data = s.filter((r) => r.scope === p.scope && r.cls === p.cls).sort((a, b) => b.IVI - a.IVI).slice(0, 10);
+    el.replaceChildren();
+    if (!data.length) { emptyMsg(el, 'ไม่มีข้อมูลกลุ่มนี้'); return; }
+    const W = el.clientWidth || 400, rowH = 28, top = 6, bottom = 26;
+    const H = top + bottom + data.length * rowH;
+    const svg = svgIn(el, H, 'IVI ของ 10 ชนิดแรก แยก RD RDo RF');
+    const lw = Math.min(W * 0.42, textWidth(svg, data.map((d) => d.th), 'lbl') + 10);
+    const vw = textWidth(svg, ['300.0'], 'val') + 8;
+    const x = d3.scaleLinear().domain([0, d3.max(data, (d) => d.IVI) || 1]).nice().range([lw, W - vw]);
+    const y = d3.scaleBand().domain(data.map((d) => d.key)).range([top, H - bottom]).padding(0.22);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${H - bottom})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - lw) / 70))).tickSize(-(H - bottom - top)).tickFormat('')).select('.domain').remove();
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - bottom})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - lw) / 70))));
+    const tip = tipper(el);
+    const parts = ['RD', 'RDo', 'RF'];
+    data.forEach((d) => {
+      let x0 = 0;
+      const g = svg.append('g');
+      parts.forEach((k, i) => {
+        const v = num(d[k]) || 0;
+        g.append('rect').attr('x', x(x0)).attr('y', y(d.key)).attr('width', Math.max(0, x(x0 + v) - x(x0))).attr('height', y.bandwidth()).style('fill', col(i));
+        x0 += v;
+      });
+      g.append('text').attr('class', 'lbl').attr('x', lw - 8).attr('y', y(d.key) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(d.th);
+      g.append('text').attr('class', 'val').attr('x', x(d.IVI) + 5).attr('y', y(d.key) + y.bandwidth() / 2).attr('dy', '0.35em').text(fmt(d.IVI, 1));
+      g.append('rect').attr('x', 0).attr('y', y(d.key) - 2).attr('width', W).attr('height', y.bandwidth() + 4).style('fill', 'transparent')
+        .on('pointermove', (ev) => tip.show(ev, [d.th, d.sci, `IVI ${fmt(d.IVI, 1)} · RD ${fmt(d.RD, 1)} · RDo ${fmt(d.RDo, 1)} · RF ${fmt(d.RF, 1)}`, `${d.n} ต้น · ${fmt(d.dens_ha, 0)} ต้น/ha · BA ${fmt(d.ba_m2_ha, 2)} ตร.ม./ha`]))
+        .on('pointerleave', () => tip.hide());
+    });
+  });
+
+  // ---------- size classes ----------
+  dash.draw('size', (el) => {
+    const s = ok('sizeclass'); if (!s) { placeholder(el, 'sizeclass'); return; }
+    const p = P();
+    const data = s.filter((r) => r.scope === p.scope && r.cls === p.cls && r.kind === p.sizek).sort((a, b) => a.order - b.order);
+    el.replaceChildren();
+    if (!data.length || !d3.sum(data, (d) => d.stems)) { emptyMsg(el, 'ไม่มีข้อมูลกลุ่มนี้'); return; }
+    const W = el.clientWidth || 400, H = 280, m = {t: 18, r: 8, b: 40, l: 40};
+    const svg = svgIn(el, H, 'จำนวนลำต้นในแต่ละชั้นขนาด');
+    const x = d3.scaleBand().domain(data.map((d) => d.bin)).range([m.l, W - m.r]).padding(0.18);
+    const y = d3.scaleLinear().domain([0, d3.max(data, (d) => d.stems)]).nice().range([H - m.b, m.t]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat('')).select('.domain').remove();
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5));
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x));
+    svg.append('text').attr('x', (m.l + W - m.r) / 2).attr('y', H - 6).attr('text-anchor', 'middle').text(p.sizek === 'dbh' ? 'DBH (ซม.)' : 'ความสูง (ม.)');
+    const tip = tipper(el), total = d3.sum(data, (d) => d.stems);
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.bin)).attr('width', x.bandwidth()).attr('y', (d) => y(d.stems)).attr('height', (d) => y(0) - y(d.stems)).style('fill', col(0))
+      .on('pointermove', (ev, d) => tip.show(ev, [(p.sizek === 'dbh' ? 'DBH ' : 'สูง ') + d.bin + (p.sizek === 'dbh' ? ' ซม.' : ' ม.'), `${d.stems} ลำต้น (${fmt(100 * d.stems / total, 1)}%)`]))
+      .on('pointerleave', () => tip.hide());
+    if (x.bandwidth() > 16) svg.append('g').selectAll('text').data(data).join('text').attr('class', 'val').attr('text-anchor', 'middle')
+      .attr('x', (d) => x(d.bin) + x.bandwidth() / 2).attr('y', (d) => y(d.stems) - 4).text((d) => d.stems);
+  });
+
+  // ---------- species table ----------
+  function cell(tr, text, cls) { const td = document.createElement('td'); if (cls) td.className = cls; td.textContent = text; tr.appendChild(td); return td; }
+  function spRow(r, full) {
+    const tr = document.createElement('tr'); tr.setAttribute('data-key', enc(r.key));
+    const th = document.createElement('td'); th.className = 'l';
+    const n = document.createElement('div'); n.textContent = r.th; th.appendChild(n);
+    if (r.sci) { const sc = document.createElement('div'); sc.className = 'sci'; sc.textContent = r.sci; th.appendChild(sc); }
+    tr.appendChild(th);
+    if (full) {
+      cell(tr, fmt(r.n, 0)); cell(tr, fmt(r.stems, 0)); cell(tr, fmt(r.dens_ha, 1)); cell(tr, fmt(r.RD, 2)); cell(tr, fmt(r.ba_m2_ha, 3)); cell(tr, fmt(r.RDo, 2));
+      cell(tr, fmt(r.F, 1)); cell(tr, fmt(r.RF, 2)); cell(tr, fmt(r.IVI, 2)); cell(tr, fmt(r.agb_t_ha, 2));
+    } else {
+      cell(tr, fmt(r.n, 0)); cell(tr, fmt(r.RD, 1)); cell(tr, fmt(r.RDo, 1)); cell(tr, fmt(r.RF, 1)); cell(tr, fmt(r.IVI, 1));
+    }
+    return tr;
+  }
+  function emptyRow(tb, cols, text) { const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan = cols; td.className = 'l'; td.textContent = text; tr.appendChild(td); tb.replaceChildren(tr); }
+  dash.draw('sptable', (tb) => {
+    const s = ok('species'); if (!s) { emptyRow(tb, 11, failText('species')); return; }
+    const p = P();
+    const rows = s.filter((r) => r.scope === p.scope && r.cls === p.cls).sort((a, b) => b.IVI - a.IVI);
+    if (!rows.length) { emptyRow(tb, 11, 'ไม่มีข้อมูลกลุ่มนี้'); return; }
+    tb.replaceChildren(...rows.map((r) => spRow(r, true)));
+  });
+  dash.draw('subsp', (tb) => {
+    const s = ok('species'); if (!s) { emptyRow(tb, 6, failText('species')); return; }
+    const p = P();
+    const rows = s.filter((r) => r.scope === p.sub && r.cls === p.cls).sort((a, b) => b.IVI - a.IVI);
+    if (!rows.length) { emptyRow(tb, 6, 'ไม่พบพืชกลุ่มนี้ในแปลงย่อยนี้'); return; }
+    tb.replaceChildren(...rows.map((r) => spRow(r, false)));
+  });
+
+  // ---------- subplot bars ----------
+  const SUBM_D = {dens_ha: 0, ba_m2_ha: 2, species: 0, shannon: 2, simpson: 2, agb_t_ha: 1, c_t_ha: 1, h_mean_m: 1};
+  const SUBM_REF = {dens_ha: 1, ba_m2_ha: 1, agb_t_ha: 1, c_t_ha: 1, h_mean_m: 1};
+  dash.draw('subbars', (el) => {
+    const m = ok('metrics'); if (!m) { placeholder(el, 'metrics'); return; }
+    const p = P(), f = p.subm, dd = SUBM_D[f] ?? 1;
+    const data = SUBS.filter((s) => inScope(s, p.scope)).map((s) => m.find((r) => r.key === s + '|' + p.cls)).filter(Boolean);
+    el.replaceChildren();
+    const W = el.clientWidth || 400, H = 260, mg = {t: 32, r: 8, b: 28, l: 44};
+    const svg = svgIn(el, H, 'ค่าตัวแปรรายแปลงย่อย');
+    const x = d3.scaleBand().domain(data.map((d) => d.scope)).range([mg.l, W - mg.r]).padding(0.2);
+    const ref = SUBM_REF[f] ? metricRow(p.scope + '|' + p.cls) : null;
+    const ymax = d3.max(data.concat(ref ? [ref] : []), (d) => num(d[f]) || 0) || 1;
+    const y = d3.scaleLinear().domain([0, ymax]).nice().range([H - mg.b, mg.t]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - mg.l - mg.r)).tickFormat('')).select('.domain').remove();
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat(d3.format('~s')));
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - mg.b})`).call(d3.axisBottom(x));
+    const tip = tipper(el);
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.scope)).attr('width', x.bandwidth()).attr('y', (d) => y(num(d[f]) || 0)).attr('height', (d) => y(0) - y(num(d[f]) || 0))
+      .style('fill', (d) => col(d.scope[0] === 'A' ? 0 : 1)).style('cursor', 'pointer')
+      .style('opacity', (d) => (d.scope === p.sub ? 1 : 0.82))
+      .on('click', (ev, d) => { dash.setParams({sub: d.scope}); const t = document.getElementById('detail'); if (t) t.scrollIntoView({behavior: reduce() ? 'auto' : 'smooth', block: 'start'}); })
+      .on('pointermove', (ev, d) => tip.show(ev, [d.scope, `${fmt(d[f], dd)}`, `${d.n_ind} ต้น · ${d.species} ชนิด`, 'คลิกเพื่อดูรายละเอียด']))
+      .on('pointerleave', () => tip.hide());
+    if (x.bandwidth() > 22) svg.append('g').selectAll('text').data(data).join('text').attr('class', 'val').attr('text-anchor', 'middle')
+      .attr('x', (d) => x(d.scope) + x.bandwidth() / 2).attr('y', (d) => y(num(d[f]) || 0) - 4).text((d) => fmt(d[f], dd));
+    if (ref && num(ref[f]) !== null) {
+      const yy = y(+ref[f]);
+      svg.append('line').attr('x1', mg.l).attr('x2', W - mg.r).attr('y1', yy).attr('y2', yy).style('stroke', 'var(--cds-chart-reference)').style('stroke-dasharray', '4 3');
+      svg.append('text').attr('x', W - mg.r).attr('y', 12).attr('text-anchor', 'end').text('- - - ค่ารวม' + SCOPE_NAME[p.scope].replace('ภาพรวม', '') + ' ' + fmt(ref[f], dd));
+    }
+  });
+
+  // ---------- similarity heatmap ----------
+  function heatmap(el, subs, cells, tipLines, label) {
+    el.replaceChildren();
+    const W = el.clientWidth || 400, lab = 34;
+    const size = Math.min(W - lab - 4, 720), cw = size / subs.length;
+    const vfs = Math.max(10, Math.min(15, cw * 0.36)), lfs = Math.max(11, Math.min(14, cw * 0.34));
+    const H = size + lab + 4;
+    const svg = svgIn(el, H, label);
+    const g = svg.append('g').attr('transform', `translate(${lab},${lab})`);
+    const tip = tipper(el);
+    g.selectAll('rect').data(cells).join('rect')
+      .attr('x', (d) => subs.indexOf(d.b) * cw + 1).attr('y', (d) => subs.indexOf(d.a) * cw + 1)
+      .attr('width', Math.max(0, cw - 2)).attr('height', Math.max(0, cw - 2)).attr('rx', 2)
+      .style('fill', col(0)).style('fill-opacity', (d) => (num(d.sorensen) === null ? 0 : 0.08 + 0.92 * d.sorensen))
+      .style('stroke', 'var(--color-border-line)')
+      .on('pointermove', (ev, d) => tip.show(ev, tipLines(d)))
+      .on('pointerleave', () => tip.hide());
+    if (cw >= 26) g.selectAll('text.v').data(cells.filter((d) => d.a !== d.b && num(d.sorensen) !== null)).join('text').attr('class', 'v')
+      .attr('x', (d) => subs.indexOf(d.b) * cw + cw / 2).attr('y', (d) => subs.indexOf(d.a) * cw + cw / 2).attr('dy', '0.35em').attr('text-anchor', 'middle')
+      .style('font-size', vfs + 'px').style('pointer-events', 'none').style('fill', (d) => (d.sorensen > 0.55 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => fmt(d.sorensen, 2).replace(/^0/, ''));
+    const nA = subs.filter((s) => s[0] === 'A').length;
+    if (nA && nA < subs.length) {
+      g.append('line').attr('x1', nA * cw).attr('x2', nA * cw).attr('y1', -4).attr('y2', size + 4).style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+      g.append('line').attr('y1', nA * cw).attr('y2', nA * cw).attr('x1', -4).attr('x2', size + 4).style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
+    }
+    svg.append('g').selectAll('text').data(subs).join('text').attr('x', (d, i) => lab + i * cw + cw / 2).attr('y', lab - 9).attr('text-anchor', 'middle').style('font-size', lfs + 'px').style('fill', 'var(--color-fg)').text((d) => d);
+    svg.append('g').selectAll('text').data(subs).join('text').attr('x', lab - 6).attr('y', (d, i) => lab + i * cw + cw / 2).attr('dy', '0.35em').attr('text-anchor', 'end').style('font-size', lfs + 'px').style('fill', 'var(--color-fg)').text((d) => d);
+  }
+  dash.draw('simheat', (el) => {
+    const s = ok('similarity'); if (!s) { placeholder(el, 'similarity'); return; }
+    const p = P(), subs = SUBS.filter((x) => inScope(x, p.scope));
+    heatmap(el, subs, s.filter((r) => r.cls === p.cls && subs.includes(r.a) && subs.includes(r.b)), (d) => [`${d.a} × ${d.b}`, d.sorensen === null ? 'ไม่มีชนิดในทั้งสองแปลง' : `QS ${fmt(d.sorensen, 2)} · ร่วม ${d.shared} ชนิด`, `${d.a}: ${d.species_a} ชนิด · ${d.b}: ${d.species_b} ชนิด`], 'เมทริกซ์ความคล้ายคลึง Sørensen ระหว่างแปลงย่อย');
+  });
+
+  // ---------- whole-plot map ----------
+  const ORIG = {A1:[0,40],A2:[20,40],A3:[0,60],A4:[20,60],A5:[40,0],A6:[60,0],A7:[40,20],B1:[60,20],B2:[80,40],B3:[100,40],B4:[80,60],B5:[100,60],B6:[40,80],B7:[60,80],B8:[40,100],B9:[60,100]};
+  dash.draw('plotmap', (el) => {
+    const t = ok('trees'); if (!t) { placeholder(el, 'trees'); return; }
+    const p = P();
+    el.replaceChildren();
+    const W = el.clientWidth || 400, m = 26;
+    const side = Math.min(W - m - 6, 620);
+    const svg = svgIn(el, side + m + 6, 'ผังรวมตำแหน่งต้นไม้ในแปลง A และ B');
+    const g = svg.append('g').attr('transform', `translate(${m},4)`);
+    const x = d3.scaleLinear().domain([0, 120]).range([0, side]);
+    const y = d3.scaleLinear().domain([0, 120]).range([side, 0]);
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${side})`).call(d3.axisBottom(x).tickValues(d3.range(0, 121, 20)));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).tickValues(d3.range(0, 121, 20)));
+    const withXY = new Set(t.filter((d) => num(d.gx_m) !== null).map((d) => d.sub));
+    const tip = tipper(el);
+    Object.entries(ORIG).forEach(([s, [x0, y0]]) => {
+      const on = inScope(s, p.scope);
+      const cg = g.append('g').style('cursor', 'pointer')
+        .on('click', () => dash.setParams({sub: s}))
+        .on('pointermove', (ev) => { const n = t.filter((d) => d.sub === s && d.cls === p.cls).length; tip.show(ev, [s, `(x₀, y₀) = (${x0}, ${y0})`, `${n} ต้น กลุ่ม ${CLS_NAME[p.cls]}`, withXY.has(s) ? 'คลิกเพื่อดูรายละเอียด' : 'ไม่มีพิกัดต้นไม้']); })
+        .on('pointerleave', () => tip.hide());
+      cg.append('rect').attr('x', x(x0)).attr('y', y(y0 + 20)).attr('width', x(20) - x(0)).attr('height', y(0) - y(20))
+        .style('fill', s[0] === 'A' ? col(0) : col(1)).style('fill-opacity', on ? (s === p.sub ? 0.22 : 0.08) : 0.02)
+        .style('stroke', s === p.sub ? 'var(--color-fg)' : 'var(--cds-chart-axis)').style('stroke-width', s === p.sub ? 2 : 1)
+        .style('stroke-dasharray', withXY.has(s) ? null : '3 3');
+      cg.append('text').attr('class', 'lbl').attr('x', x(x0) + 4).attr('y', y(y0 + 20) + 13).style('opacity', on ? 1 : 0.4).text(s);
+    });
+    const r = d3.scaleSqrt().domain([0, d3.max(t, (d) => d.dbh_max_cm) || 50]).range([1.2, Math.max(4, side / 70)]);
+    const pts = t.filter((d) => num(d.gx_m) !== null && inScope(d.sub, p.scope)).sort((a, b) => b.dbh_max_cm - a.dbh_max_cm);
+    g.append('g').style('pointer-events', 'none').selectAll('circle').data(pts).join('circle')
+      .attr('cx', (d) => x(+d.gx_m)).attr('cy', (d) => y(+d.gy_m)).attr('r', (d) => r(d.dbh_max_cm))
+      .style('fill', (d) => col(d.cls === 'T' ? 0 : 3)).style('fill-opacity', (d) => (d.cls === p.cls ? 0.8 : 0.2));
+  });
+
+  // ---------- stem map ----------
+  dash.draw('stemmap', (el) => {
+    const t = ok('trees'); if (!t) { placeholder(el, 'trees'); return; }
+    const p = P();
+    const all = t.filter((r) => r.sub === p.sub);
+    const pts = all.filter((r) => num(r.x_m) !== null && num(r.y_m) !== null);
+    el.replaceChildren();
+    if (!pts.length) { emptyMsg(el, `${p.sub} ไม่มีพิกัดต้นไม้ (${all.length} ต้น) จึงแสดงแผนที่ไม่ได้`); return; }
+    const W = el.clientWidth || 360, side = Math.min(W - 40, 440), m = 30;
+    const svg = svgIn(el, side + m + 8, `แผนที่ตำแหน่งต้นไม้ในแปลงย่อย ${p.sub}`);
+    const g = svg.append('g').attr('transform', `translate(${m},8)`);
+    const x = d3.scaleLinear().domain([0, 20]).range([0, side]);
+    const y = d3.scaleLinear().domain([0, 20]).range([side, 0]);
+    g.append('rect').attr('width', side).attr('height', side).style('fill', 'none').style('stroke', 'var(--cds-chart-axis)');
+    g.append('line').attr('x1', x(10)).attr('x2', x(10)).attr('y1', 0).attr('y2', side).style('stroke', 'var(--cds-chart-grid)').style('stroke-dasharray', '4 4');
+    g.append('line').attr('y1', y(10)).attr('y2', y(10)).attr('x1', 0).attr('x2', side).style('stroke', 'var(--cds-chart-grid)').style('stroke-dasharray', '4 4');
+    [['SW', 2.5, 2.5], ['SE', 17.5, 2.5], ['NW', 2.5, 17.5], ['NE', 17.5, 17.5]].forEach(([q, a, b]) => g.append('text').attr('x', x(a)).attr('y', y(b)).attr('text-anchor', 'middle').attr('dy', '0.35em').style('opacity', 0.6).text(q));
+    g.append('g').attr('class', 'axis').attr('transform', `translate(0,${side})`).call(d3.axisBottom(x).tickValues([0, 5, 10, 15, 20]));
+    g.append('g').attr('class', 'axis').call(d3.axisLeft(y).tickValues([0, 5, 10, 15, 20]));
+    const r = d3.scaleSqrt().domain([0, d3.max(t, (d) => d.dbh_max_cm) || 50]).range([2, Math.max(8, side / 28)]);
+    const tip = tipper(el);
+    const sorted = pts.slice().sort((a, b) => b.dbh_max_cm - a.dbh_max_cm);
+    g.append('g').selectAll('circle').data(sorted).join('circle')
+      .attr('cx', (d) => x(+d.x_m)).attr('cy', (d) => y(+d.y_m)).attr('r', (d) => r(d.dbh_max_cm))
+      .style('fill', (d) => col(d.cls === 'T' ? 0 : 3)).style('fill-opacity', (d) => (d.cls === p.cls ? 0.75 : 0.25))
+      .style('stroke', (d) => col(d.cls === 'T' ? 0 : 3))
+      .on('pointermove', (ev, d) => tip.show(ev, [d.th, d.sci, `${d.cls === 'T' ? 'Tree' : 'Sapling/shrub'} · ${d.stems} นาง`, `DBH สูงสุด ${fmt(d.dbh_max_cm, 1)} ซม. · สูง ${fmt(d.h_max_m, 1)} ม.`, `ตำแหน่ง (${fmt(d.x_m, 1)}, ${fmt(d.y_m, 1)}) ม. · ${d.quad}`]))
+      .on('pointerleave', () => tip.hide());
+    if (pts.length < all.length) svg.append('text').attr('x', m).attr('y', side + m + 4).text(`ไม่มีพิกัด ${all.length - pts.length} ต้น`);
+  });
+  dash.draw('subnote', (el) => {
+    const e = ok('envsum'); if (!e) { el.textContent = failText('envsum'); return; }
+    const p = P(), r = e.find((x) => x.scope === p.sub);
+    where(el, 'scope', p.sub);
+    el.textContent = r && r.note ? r.note : 'ไม่มีบันทึกลักษณะแปลง';
+  });
+
+  // ---------- environment ----------
+  const ENV_UNIT = {tair: '°C', tsurf: '°C', tsoil: '°C', rh: '%'};
+  dash.draw('envline', (el) => {
+    const e = ok('envsum'); if (!e) { placeholder(el, 'envsum'); return; }
+    const p = P(), v = p.envv, times = [0, 30, 60, 90];
+    const series = ['A', 'B'].map((s, i) => ({s, i, pts: times.map((t) => ({t, v: num((e.find((r) => r.scope === s) || {})[v + '_' + t])})).filter((d) => d.v !== null)}));
+    el.replaceChildren();
+    const W = el.clientWidth || 400, H = 240, m = {t: 14, r: 34, b: 34, l: 40};
+    const svg = svgIn(el, H, 'ค่าเฉลี่ยปัจจัยกายภาพของแปลง A และ B ตามเวลา');
+    const allv = series.flatMap((s) => s.pts.map((d) => d.v));
+    const ext = d3.extent(allv); const pad = Math.max(0.5, (ext[1] - ext[0]) * 0.25);
+    const x = d3.scalePoint().domain(times).range([m.l, W - m.r]).padding(0.3);
+    const y = d3.scaleLinear().domain([ext[0] - pad, ext[1] + pad]).nice().range([H - m.b, m.t]);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickSize(-(W - m.l - m.r)).tickFormat('')).select('.domain').remove();
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5));
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickFormat((d) => 'นาทีที่ ' + d));
+    const tip = tipper(el);
+    series.forEach((s) => {
+      svg.append('path').datum(s.pts).attr('d', d3.line().x((d) => x(d.t)).y((d) => y(d.v))).style('fill', 'none').style('stroke', col(s.i)).style('stroke-width', 2);
+      svg.append('g').selectAll('circle').data(s.pts).join('circle').attr('cx', (d) => x(d.t)).attr('cy', (d) => y(d.v)).attr('r', 4).style('fill', col(s.i))
+        .on('pointermove', (ev, d) => tip.show(ev, ['แปลง ' + s.s + ' · นาทีที่ ' + d.t, fmt(d.v, 2) + ' ' + ENV_UNIT[v]]))
+        .on('pointerleave', () => tip.hide());
+      const last = s.pts[s.pts.length - 1];
+      if (last) svg.append('text').attr('class', 'lbl').attr('x', x(last.t) + 8).attr('y', y(last.v)).attr('dy', '0.35em').text(s.s);
+    });
+  });
+  dash.draw('envtable', (tb) => {
+    const e = ok('envsum'); if (!e) { emptyRow(tb, 8, failText('envsum')); return; }
+    const p = P();
+    const subs = e.filter((r) => SUBS.includes(r.scope) && inScope(r.scope, p.scope));
+    const groups = e.filter((r) => (p.scope === 'ALL' ? ['A', 'B', 'ALL'] : [p.scope]).includes(r.scope));
+    const mk = (r, bold) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', enc(r.scope));
+      const c0 = cell(tr, r.scope === 'ALL' ? 'เฉลี่ยทุกแปลง' : SUBS.includes(r.scope) ? r.scope : 'เฉลี่ยแปลง ' + r.scope, 'l');
+      if (bold) c0.style.fontWeight = '600';
+      cell(tr, fmt(r.tair_mean, 1)); cell(tr, fmt(r.tsurf_mean, 1)); cell(tr, fmt(r.tsoil_mean, 1)); cell(tr, fmt(r.rh_mean, 1));
+      cell(tr, fmt(r.ph, 1)); cell(tr, fmt(r.soil_moist_pct, 1)); cell(tr, r.munsell || '', 'l');
+      return tr;
+    };
+    tb.replaceChildren(...subs.map((r) => mk(r, false)), ...groups.map((r) => mk(r, true)));
+  });
+
+  // ---------- soil fauna ----------
+  const FCLS_NAME = {ALL: 'macro + meso', MA: 'Macrofauna', ME: 'Mesofauna'};
+  function fRow(key) { const m = ok('faunametrics'); return m ? m.find((r) => r.key === key) : null; }
+  function drawF(el, scope) {
+    const p = P(), key = scope + '|' + p.fcls, r = fRow(key);
+    if (!r) { el.textContent = failText('faunametrics'); return; }
+    where(el, 'key', key);
+    el.textContent = el.dataset.text ? (r[el.dataset.field] || '—') : fmt(r[el.dataset.field], +el.dataset.d || 0);
+  }
+  dash.draw('fkpi', (el) => drawF(el, P().scope));
+  dash.draw('fkpisub', (el) => drawF(el, P().sub));
+  dash.draw('fcmp', (el) => drawF(el, el.dataset.s));
+  dash.draw('fpattern', (el) => {
+    const p = P(), r = fRow(p.scope + '|' + p.fcls);
+    if (!r) { el.textContent = '—'; return; }
+    const I = num(r.disp_index);
+    el.textContent = I === null ? 'ต้องมีมากกว่า 1 แปลงย่อย' : (I < 0.9 ? 'กระจายสม่ำเสมอ' : I <= 1.1 ? 'กระจายแบบสุ่ม' : 'กระจายแบบรวมกลุ่ม') + ' · ' + r.subplots + ' แปลงย่อย';
+  });
+  function fSim(a, b) { const s = ok('faunasim'); return s ? s.find((r) => r.cls === P().fcls && r.a === a && r.b === b) : null; }
+  dash.draw('fsorAB', (el) => { const r = fSim('A', 'B'); if (!r) { el.textContent = failText('faunasim'); return; } where(el, 'key', r.key); el.textContent = fmt(r.sorensen, 2); });
+  dash.draw('fsorShared', (el) => { const r = fSim('A', 'B'); if (!r) { el.textContent = failText('faunasim'); return; } where(el, 'key', r.key); el.textContent = fmt(r.shared, 0); });
+
+  dash.draw('fiv', (el) => {
+    const s = ok('faunataxa'); if (!s) { placeholder(el, 'faunataxa'); return; }
+    const p = P();
+    const data = s.filter((r) => r.scope === p.scope && r.cls === p.fcls).sort((a, b) => b.IV - a.IV).slice(0, 10);
+    el.replaceChildren();
+    if (!data.length) { emptyMsg(el, 'ไม่มีข้อมูลกลุ่มนี้'); return; }
+    const W = el.clientWidth || 400, rowH = 28, top = 6, bottom = 26, H = top + bottom + data.length * rowH;
+    const svg = svgIn(el, H, 'ค่าความสำคัญของสัตว์ในดิน 10 taxa แรก');
+    const lw = Math.min(W * 0.45, textWidth(svg, data.map((d) => d.th), 'lbl') + 10);
+    const vw = textWidth(svg, ['200.0'], 'val') + 8;
+    const x = d3.scaleLinear().domain([0, d3.max(data, (d) => d.IV) || 1]).nice().range([lw, W - vw]);
+    const y = d3.scaleBand().domain(data.map((d) => d.key)).range([top, H - bottom]).padding(0.22);
+    const nt = Math.max(2, Math.floor((W - lw) / 70));
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(0,${H - bottom})`).call(d3.axisBottom(x).ticks(nt).tickSize(-(H - bottom - top)).tickFormat('')).select('.domain').remove();
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - bottom})`).call(d3.axisBottom(x).ticks(nt));
+    const tip = tipper(el);
+    data.forEach((d) => {
+      const g = svg.append('g'); let x0 = 0;
+      [['RD', 0], ['RF', 2]].forEach(([k, c]) => { const v = num(d[k]) || 0; g.append('rect').attr('x', x(x0)).attr('y', y(d.key)).attr('width', Math.max(0, x(x0 + v) - x(x0))).attr('height', y.bandwidth()).style('fill', col(c)); x0 += v; });
+      g.append('text').attr('class', 'lbl').attr('x', lw - 8).attr('y', y(d.key) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text(d.th);
+      g.append('text').attr('class', 'val').attr('x', x(d.IV) + 5).attr('y', y(d.key) + y.bandwidth() / 2).attr('dy', '0.35em').text(fmt(d.IV, 1));
+      g.append('rect').attr('x', 0).attr('y', y(d.key) - 2).attr('width', W).attr('height', y.bandwidth() + 4).style('fill', 'transparent')
+        .on('pointermove', (ev) => tip.show(ev, [d.th, d.taxon + ' · ' + d.group, `IV ${fmt(d.IV, 1)} · RD ${fmt(d.RD, 1)} · RF ${fmt(d.RF, 1)}`, `${fmt(d.n, 0)} ตัว · ${fmt(d.dens_m2, 1)} ตัว/ตร.ม. · พบใน ${d.subplots}`]))
+        .on('pointerleave', () => tip.hide());
+    });
+  });
+
+  dash.draw('fgroup', (el) => {
+    const s = ok('faunagroups'); if (!s) { placeholder(el, 'faunagroups'); return; }
+    const p = P();
+    const data = s.filter((r) => r.scope === p.scope && r.cls === p.fcls).sort((a, b) => b.n - a.n);
+    el.replaceChildren();
+    if (!data.length) { emptyMsg(el, 'ไม่มีข้อมูลกลุ่มนี้'); return; }
+    const W = el.clientWidth || 400, rowH = 24, top = 4, bottom = 24, H = top + bottom + data.length * rowH;
+    const svg = svgIn(el, H, 'สัดส่วนจำนวนตัวของแต่ละกลุ่มสัตว์ในดิน');
+    const lw = Math.min(W * 0.48, textWidth(svg, data.map((d) => d.group), 'lbl') + 10);
+    const vw = textWidth(svg, ['100.0% · 10'], 'val') + 8;
+    const x = d3.scaleLinear().domain([0, d3.max(data, (d) => d.pct)]).nice().range([lw, W - vw]);
+    const y = d3.scaleBand().domain(data.map((d) => d.group)).range([top, H - bottom]).padding(0.2);
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - bottom})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor((W - lw) / 70))).tickFormat((v) => v + '%'));
+    const tip = tipper(el);
+    const g = svg.append('g');
+    g.selectAll('rect').data(data).join('rect').attr('x', lw).attr('y', (d) => y(d.group)).attr('width', (d) => Math.max(1, x(d.pct) - lw)).attr('height', y.bandwidth()).style('fill', col(1))
+      .on('pointermove', (ev, d) => tip.show(ev, [d.group, `${fmt(d.n, 0)} ตัว (${fmt(d.pct, 1)}%)`, `${d.taxa} taxa`])).on('pointerleave', () => tip.hide());
+    g.selectAll('text.l').data(data).join('text').attr('class', 'lbl').attr('x', lw - 8).attr('y', (d) => y(d.group) + y.bandwidth() / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text((d) => d.group);
+    g.selectAll('text.v').data(data).join('text').attr('class', 'val').attr('x', (d) => x(d.pct) + 5).attr('y', (d) => y(d.group) + y.bandwidth() / 2).attr('dy', '0.35em').text((d) => fmt(d.pct, 1) + '% · ' + d.taxa);
+  });
+
+  const FSUBM_D = {taxa: 0, individuals: 0, dens_m2: 0, shannon: 2, simpson: 2};
+  dash.draw('fsubbars', (el) => {
+    const m = ok('faunametrics'); if (!m) { placeholder(el, 'faunametrics'); return; }
+    const p = P(), f = p.fsubm, dd = FSUBM_D[f] ?? 1;
+    const data = SUBS.filter((s) => inScope(s, p.scope)).map((s) => m.find((r) => r.key === s + '|' + p.fcls)).filter(Boolean);
+    el.replaceChildren();
+    const W = el.clientWidth || 400, H = 260, mg = {t: 22, r: 8, b: 28, l: 48};
+    const svg = svgIn(el, H, 'ค่าสัตว์ในดินรายแปลงย่อย');
+    const logScale = f === 'individuals' || f === 'dens_m2';
+    const vals = data.map((d) => num(d[f]) || 0);
+    const x = d3.scaleBand().domain(data.map((d) => d.scope)).range([mg.l, W - mg.r]).padding(0.2);
+    const y = logScale ? d3.scaleSymlog().constant(10).domain([0, d3.max(vals) || 1]).range([H - mg.b, mg.t]) : d3.scaleLinear().domain([0, d3.max(vals) || 1]).nice().range([H - mg.b, mg.t]);
+    const ticks = logScale ? [0, 10, 100, 1000, 10000].filter((t) => t <= (d3.max(vals) || 1) * 1.01) : y.ticks(5);
+    svg.append('g').attr('class', 'grid').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).tickValues(ticks).tickSize(-(W - mg.l - mg.r)).tickFormat('')).select('.domain').remove();
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(${mg.l},0)`).call(d3.axisLeft(y).tickValues(ticks).tickFormat(d3.format(',')));
+    svg.append('g').attr('class', 'axis').attr('transform', `translate(0,${H - mg.b})`).call(d3.axisBottom(x));
+    if (logScale) svg.append('text').attr('x', mg.l).attr('y', 10).text('แกนตั้งแบบ log');
+    const tip = tipper(el);
+    svg.append('g').selectAll('rect').data(data).join('rect')
+      .attr('x', (d) => x(d.scope)).attr('width', x.bandwidth()).attr('y', (d) => y(num(d[f]) || 0)).attr('height', (d) => y(0) - y(num(d[f]) || 0))
+      .style('fill', (d) => col(d.scope[0] === 'A' ? 0 : 1)).style('cursor', 'pointer')
+      .on('click', (ev, d) => { dash.setParams({sub: d.scope}); const t = document.getElementById('detail'); if (t) t.scrollIntoView({behavior: reduce() ? 'auto' : 'smooth', block: 'start'}); })
+      .on('pointermove', (ev, d) => tip.show(ev, [d.scope, d.subplots ? `${fmt(d[f], dd)}` : 'ไม่มีข้อมูล', `${fmt(d.individuals, 0)} ตัว · ${d.taxa} taxa`, d.top_taxon ? 'พบมากสุด: ' + d.top_taxon : '']))
+      .on('pointerleave', () => tip.hide());
+    if (x.bandwidth() > 22) svg.append('g').selectAll('text').data(data).join('text').attr('class', 'val').attr('text-anchor', 'middle')
+      .attr('x', (d) => x(d.scope) + x.bandwidth() / 2).attr('y', (d) => y(num(d[f]) || 0) - 4).text((d) => (d.subplots ? fmt(d[f], dd) : 'ไม่มี'));
+  });
+
+  dash.draw('fsimheat', (el) => {
+    const s = ok('faunasim'); if (!s) { placeholder(el, 'faunasim'); return; }
+    const p = P();
+    const all = [...new Set(s.filter((r) => SUBS.includes(r.a)).map((r) => r.a))];
+    const subs = SUBS.filter((x) => all.includes(x) && inScope(x, p.scope));
+    heatmap(el, subs, s.filter((r) => r.cls === p.fcls && subs.includes(r.a) && subs.includes(r.b)), (d) => [`${d.a} × ${d.b}`, d.sorensen === null ? 'ไม่มี taxa ในทั้งสองแปลง' : `QS ${fmt(d.sorensen, 2)} · ร่วม ${d.shared} taxa`, `${d.a}: ${d.taxa_a} taxa · ${d.b}: ${d.taxa_b} taxa`], 'เมทริกซ์ความคล้ายคลึงของสัตว์ในดินระหว่างแปลงย่อย');
+  });
+
+  const SIZE_TH = {macro: 'macro', meso: 'meso'};
+  function fTaxRow(r, full) {
+    const tr = document.createElement('tr'); tr.setAttribute('data-key', enc(r.key));
+    const th = document.createElement('td'); th.className = 'l';
+    const n = document.createElement('div'); n.textContent = r.th; th.appendChild(n);
+    const sc = document.createElement('div'); sc.className = 'sci'; sc.textContent = r.taxon; th.appendChild(sc);
+    tr.appendChild(th);
+    cell(tr, r.group, 'l');
+    cell(tr, fmt(r.n, 0)); cell(tr, fmt(r.dens_m2, 1)); cell(tr, fmt(r.RD, 2));
+    if (full) { cell(tr, fmt(r.F, 1)); cell(tr, fmt(r.RF, 2)); cell(tr, fmt(r.IV, 2)); cell(tr, r.subplots, 'l'); }
+    return tr;
+  }
+  dash.draw('ftaxa', (tb) => {
+    const s = ok('faunataxa'); if (!s) { emptyRow(tb, 10, failText('faunataxa')); return; }
+    const p = P(), rows = s.filter((r) => r.scope === p.scope && r.cls === p.fcls).sort((a, b) => b.IV - a.IV);
+    if (!rows.length) { emptyRow(tb, 10, 'ไม่มีข้อมูลกลุ่มนี้'); return; }
+    tb.replaceChildren(...rows.map((r) => fTaxRow(r, true)));
+  });
+  dash.draw('fsubtaxa', (tb) => {
+    const s = ok('faunataxa'); if (!s) { emptyRow(tb, 5, failText('faunataxa')); return; }
+    const p = P(), rows = s.filter((r) => r.scope === p.sub && r.cls === p.fcls).sort((a, b) => b.n - a.n);
+    if (!rows.length) { emptyRow(tb, 5, p.sub === 'A1' ? 'A1 ไม่มีข้อมูลสัตว์ในดิน' : 'ไม่พบสัตว์กลุ่มนี้ในแปลงย่อยนี้'); return; }
+    tb.replaceChildren(...rows.map((r) => fTaxRow(r, false)));
+  });
+  dash.draw('fexcl', (tb) => {
+    const f = ok('fauna'); if (!f) { emptyRow(tb, 5, failText('fauna')); return; }
+    const p = P(), rows = f.filter((r) => String(r.include) !== '1' && inScope(r.sub, p.scope));
+    if (!rows.length) { emptyRow(tb, 5, 'ไม่มีรายการ'); return; }
+    tb.replaceChildren(...rows.map((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', enc(r.sub) + ',' + enc(r.taxon));
+      cell(tr, r.sub, 'l'); cell(tr, r.th, 'l'); const c = cell(tr, r.taxon, 'l sci'); c.style.fontStyle = 'italic'; cell(tr, r.group, 'l'); cell(tr, fmt(r.count, 0));
+      return tr;
+    }));
+  });
+
+  // ---------- change log ----------
+  const PILL = {'แก้ไข': 'fix', 'เติมข้อมูล': 'fill', 'จัดรูปแบบ': 'fill', 'ตรวจสอบ': 'chk'};
+  dash.draw('chgtable', (tb) => {
+    const c = ok('changes'); if (!c) { emptyRow(tb, 8, failText('changes')); return; }
+    const p = P();
+    const rows = c.filter((r) => !r.sub || p.scope === 'ALL' || String(r.sub).split(',').some((s) => inScope(s.trim(), p.scope)));
+    if (!rows.length) { emptyRow(tb, 8, 'ไม่มีรายการ'); return; }
+    tb.replaceChildren(...rows.map((r) => {
+      const tr = document.createElement('tr'); tr.setAttribute('data-key', enc(r.id));
+      cell(tr, r.sheet || '', 'l'); cell(tr, r.sub || 'ทุกแปลง', 'l'); cell(tr, +r.excel_row ? r.excel_row : '—');
+      const td = cell(tr, '', 'l'); const s = document.createElement('span'); s.className = 'pp-pill ' + (PILL[r.type] || ''); s.textContent = r.type; td.appendChild(s);
+      cell(tr, r.field, 'l'); cell(tr, r.old, 'l'); cell(tr, r.new, 'l'); cell(tr, r.reason, 'l wrap');
+      return tr;
+    }));
+  });
+})();
+</script>
 </body></html>
