@@ -791,8 +791,9 @@ for (const id of Object.keys(CALCS)) dash.calc(id, CALCS[id]);
     const p = P(), subs = SUBS.filter((x) => inScope(x, p.scope));
     const cells = s.filter((r) => r.cls === p.cls && subs.includes(r.a) && subs.includes(r.b));
     el.replaceChildren();
-    const W = el.clientWidth || 400, lab = 28;
-    const size = Math.min(W - lab - 4, 560), cw = size / subs.length;
+    const W = el.clientWidth || 400, lab = 34;
+    const size = Math.min(W - lab - 4, 720), cw = size / subs.length;
+    const vfs = Math.max(10, Math.min(15, cw * 0.36)), lfs = Math.max(11, Math.min(14, cw * 0.34));
     const H = size + lab + 4;
     const svg = svgIn(el, H, 'เมทริกซ์ความคล้ายคลึง Sørensen ระหว่างแปลงย่อย');
     const g = svg.append('g').attr('transform', `translate(${lab},${lab})`);
@@ -804,16 +805,16 @@ for (const id of Object.keys(CALCS)) dash.calc(id, CALCS[id]);
       .style('stroke', 'var(--color-border-line)')
       .on('pointermove', (ev, d) => tip.show(ev, [`${d.a} × ${d.b}`, d.sorensen === null ? 'ไม่มีชนิดในทั้งสองแปลง' : `QS ${fmt(d.sorensen, 2)} · ร่วม ${d.shared} ชนิด`, `${d.a}: ${d.species_a} ชนิด · ${d.b}: ${d.species_b} ชนิด`]))
       .on('pointerleave', () => tip.hide());
-    if (cw >= 30) g.selectAll('text.v').data(cells.filter((d) => d.a !== d.b && num(d.sorensen) !== null)).join('text').attr('class', 'v')
+    if (cw >= 26) g.selectAll('text.v').data(cells.filter((d) => d.a !== d.b && num(d.sorensen) !== null)).join('text').attr('class', 'v')
       .attr('x', (d) => subs.indexOf(d.b) * cw + cw / 2).attr('y', (d) => subs.indexOf(d.a) * cw + cw / 2).attr('dy', '0.35em').attr('text-anchor', 'middle')
-      .style('font-size', '10px').style('pointer-events', 'none').style('fill', (d) => (d.sorensen > 0.55 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => fmt(d.sorensen, 2).replace(/^0/, ''));
+      .style('font-size', vfs + 'px').style('pointer-events', 'none').style('fill', (d) => (d.sorensen > 0.55 ? 'var(--color-bg)' : 'var(--color-fg)')).text((d) => fmt(d.sorensen, 2).replace(/^0/, ''));
     const nA = subs.filter((s) => s[0] === 'A').length;
     if (nA && nA < subs.length) {
       g.append('line').attr('x1', nA * cw).attr('x2', nA * cw).attr('y1', -4).attr('y2', size + 4).style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
       g.append('line').attr('y1', nA * cw).attr('y2', nA * cw).attr('x1', -4).attr('x2', size + 4).style('stroke', 'var(--color-fg)').style('stroke-width', 1.5);
     }
-    svg.append('g').selectAll('text').data(subs).join('text').attr('x', (d, i) => lab + i * cw + cw / 2).attr('y', lab - 8).attr('text-anchor', 'middle').text((d) => d);
-    svg.append('g').selectAll('text').data(subs).join('text').attr('x', lab - 6).attr('y', (d, i) => lab + i * cw + cw / 2).attr('dy', '0.35em').attr('text-anchor', 'end').text((d) => d);
+    svg.append('g').selectAll('text').data(subs).join('text').attr('x', (d, i) => lab + i * cw + cw / 2).attr('y', lab - 9).attr('text-anchor', 'middle').style('font-size', lfs + 'px').style('fill', 'var(--color-fg)').text((d) => d);
+    svg.append('g').selectAll('text').data(subs).join('text').attr('x', lab - 6).attr('y', (d, i) => lab + i * cw + cw / 2).attr('dy', '0.35em').attr('text-anchor', 'end').style('font-size', lfs + 'px').style('fill', 'var(--color-fg)').text((d) => d);
   });
 
 
